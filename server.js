@@ -73,8 +73,6 @@ router.route('/bears')
 			if (err)
 				res.send(err);
 			res.json(bears);
-			//res.send('aa')
-			console.log(bears);
 		});
 	});
 

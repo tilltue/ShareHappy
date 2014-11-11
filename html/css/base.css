@@ -224,6 +224,13 @@ header .social a:hover {
     text-align: right;
   }
 }
+
+.logo-title {
+  font-size:30px;
+  padding: 5px 0;
+  color: #FFFFFF;
+  text-align: center;
+}
 /* site title */
 .site-title {
   padding: 5px 0;
