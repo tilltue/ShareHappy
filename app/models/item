@@ -1,0 +1,16 @@
+// app/models/item.js
+
+var mongoose     = require('mongoose');
+var Schema       = mongoose.Schema;
+
+var ItemSchema   = new Schema({
+	name : String,
+	create_date : Date,
+	start_date : Date,
+	due_date : Date,
+	images : [String],
+	price : String,
+	desc : String
+});
+
+module.exports = mongoose.model('Item', ItemSchema);

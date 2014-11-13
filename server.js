@@ -5,6 +5,7 @@ var app        = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Bear     = require('./app/models/bear');
+var Item     = require('./app/models/item');
 var fs		 = require('fs');
 
 // configure app to use bodyParser()
@@ -44,6 +45,37 @@ router.use(function(req, res, next) {
 router.get('/', function(req, res) {
 	res.json({ message: 'hooray! welcome to our api!' });	
 });
+
+router.route('/share/items')
+
+	// create a bear (accessed at POST http://localhost:8080/api/share/items)
+	.post(function(req, res) {
+		
+		var item = new Item(); 		// create a new instance of the Item model
+		item.name = req.body.name;  // set the bears name (comes from the request)
+		item.create_date = new Date;
+		item.desc = req.body.desc;
+		item.images.push(req.body.images);
+		item.price = req.body.price;
+
+		// save the item and check for errors
+		item.save(function(err) {
+			if (err)
+				res.send(err);
+
+			res.json({ message: 'Item created!' });
+		});
+		
+	})
+
+	// get all the bears (accessed at GET http://localhost:8080/api/share/items)
+	.get(function(req, res) {
+		Item.find(function(err, items) {
+			if (err)
+				res.send(err);
+			res.json(items);
+		});
+	});
 
 // more routes for our API will happen here
 

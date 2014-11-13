@@ -191,10 +191,10 @@ a.nav-toggle:hover {
 /* ============================================================
   OTHER SIMPLE STYLES
 ============================================================ */
-.container.content {
+.container2.content {
   padding: 40px;
 }
-.container.content h2 {
+.container2.content h2 {
   margin-bottom: 20px;
   color: #282828;
   font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
