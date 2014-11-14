@@ -24,6 +24,7 @@
   <script src="/js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript">
       $(document).ready(function(){
+        /*
           var tag = "<div class=\"container content\"><h2>Hello World</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, neque, enim, voluptates, impedit tenetur quaerat dolorem ex sit quas velit sapiente nostrum tempora fugit iure optio. Laborum, tempora at incidunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, sequi dolor esse repudiandae autem iste dolores amet doloribus error officiis saepe expedita sapiente id perferendis eos recusandae velit nesciunt? Iure!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, esse, velit, eaque laborum atque iusto facilis labore mollitia veniam officia alias delectus itaque ab nesciunt id exercitationem nam! Consequuntur, ex.</p></div>";
           //$("#grid_box").html(tag);
           $.get('/api/share/items',function(data) {
@@ -64,78 +65,74 @@
             });
             //$("#grid_box").html(bears);
           },'json');
-          $('.cd-popup-trigger').on('click', function(event){
-            event.preventDefault();
-            $('.cd-popup').addClass('is-visible');
-          });
-  
-          //close popup
-          $('.cd-popup').on('click', function(event){
-            if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
-              event.preventDefault();
-              $(this).removeClass('is-visible');
-            }
-          });
-          //close popup when clicking the esc keyboard button
-          $(document).keyup(function(event){
-            if(event.which=='27'){
-              $('.cd-popup').removeClass('is-visible');
-            }
-          });
+*/
       });
-      
-      
   </script>
 </head>
 
 <body>
 
 <div class="wrapper">
-  
-  <div class="info-bar">
-    <div class="container2"> 
-      <a class="icon cmn-tut" data-title="Back To Home"></a>
-      <!-- <a class="icon cmn-prev" data-title="Pevious Demo - CSS Diagonal Menu" href="http://www.callmenick.com/tutorial-demos/css-diagonal-menu/"></a>-->
-      <!-- <a class="icon cmn-next" data-title="Next Demo - " href="http://www.callmenick.com/tutorial-demos/..."></a> -->
-      <!-- <a class="icon cmn-download" data-title="Download Source" href="http://callmenick.com/tutorial-demos/tile-navigation/tile-navigation-source.zip"></a>-->
-      <!-- <a class="icon cmn-archive" data-title="Tutorial Archives" href="http://www.callmenick.com/category/tutorials/"></a>-->
-    </div>
-  </div><!-- /.info-bar -->
-
-  <header>
-    <div class="site-title">
-      <div class="container">
-        <h1>Share Happy !</h1>
-      </div>
-    </div><!-- /.site-title -->
-
-  </header>
-
   <main>
-    
-    <a href="#" class="nav-toggle">Toggle Navigation</a>
-    <nav class="cmn-tile-nav">
-      <ul class="clearfix">
-        <li class="colour-1"><a href="#">News</a></li>
-        <li class="colour-2"><a href="#">Free Board</a></li>
-        <li class="colour-3"><a href="#">Selling</a></li>
-        <li class="colour-4"><a href="#">Rental</a></li>
-        <li class="colour-5"><a href="#">Sharing</a></li>
-        <li class="colour-6"><a href="#">Personal Project</a></li>
-        <li class="colour-7"><a href="#">iOS</a></li>
-        <li class="colour-8"><a href="#">Android</a></li>
-      </ul>
-    </nav>
-
     <div id="site-content">
-      <div id="grid_row" class="grid row">
-      </div><!-- grid row-->
-      <div id="pagination-links" class="clearfix">
-        <div class="pull-right">
-          <a href="#0" class="btn btn-default cd-popup-trigger">Post Item</a> 
-        </div>
-        <div class="text-left"></div>
+        <article class="post type-post status-publish format-standard has-post-thumbnail hentry category-javascript tag-angular-js article single tiles">
+        <!-- FEATURED IMAGE -->
+        <img width="1200" height="500" src="/img/cart.png" class="img-responsive article-img wp-post-image" alt="angular-filters" />  
+  <!-- CATEGORY -->
+  <div class="article-cat">
+    <a href="http://scotch.io/category/tutorials/javascript" rel="category tag">Javascript</a>  </div>
+
+  <!-- ARTICLE CONTENT -->
+  <div class="article-content">
+
+    <div class="tile">
+    <div class="tile-content">
+      <h1>All About the Built-In AngularJS Filters</h1>
+
+      <div class="byline clearfix">
+        <span class="byline-item byline-author">
+          <a href="http://scotch.io/author/kukicadnan">
+            <img alt='' src='http://1.gravatar.com/avatar/99c4080f412ccf46b9b564db7f482907?s=80&amp;d=retro&amp;r=G' class='avatar img-responsive avatar-80 photo' height='80' width='80' />            Adnan 
+            Kukic         </a>
+        </span>
+        <span class="byline-item">
+          <span class="ti-calendar"></span> October 30, 2014        </span>
+        <span class="byline-item">
+          <span class="ti-comments"></span> <a href="#disqus_thread" data-disqus-identifier="http://scotch.io/tutorials/javascript/all-about-the-built-in-angularjs-filters">0 Comments</a>
+        </span>
+        <span class="byline-item">
+          <span class="ti-bookmark"></span> <a href="http://scotch.io/tag/angular-js" rel="tag">angularJS</a>       </span>
       </div>
+
+      
+<div class="share-buttons clearfix">
+  <ul class="share-links list-inline">
+    <li class="share-facebook">
+            <a href="#"
+              onclick="
+                window.open(
+                  'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+                  'facebook-share-dialog',
+                  'width=626,height=436');
+                return false;">
+                <div class="social-number">11</div>
+                <div class="social-text sbg-facebook"><span class="fa fa-facebook"></span></div>
+            </a>
+        </li>
+    <li class="share-twitter">
+      <a href="https://twitter.com/intent/tweet?text=All About the Built-In AngularJS Filters&url=http://scotch.io/tutorials/javascript/all-about-the-built-in-angularjs-filters&via=scotch_io&related=scotch_io,sevilayha,nickforthought">
+        <div class="social-number">198</div>
+        <div class="social-text sbg-twitter"><span class="fa fa-twitter"></span></div>
+      </a>
+    </li>
+    <li class="share-googleplus">
+      <a href="https://plus.google.com/share?url=http://scotch.io/tutorials/javascript/all-about-the-built-in-angularjs-filters" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+        <div class="social-number">35</div>
+        <div class="social-text sbg-google-plus"><span class="fa fa-google-plus"></span></div>
+      </a>
+    </li>
+  </ul>
+</div>            
     </div><!-- /site-content -->
   </main><!-- /main -->
 
@@ -178,47 +175,7 @@
   </footer><!-- /footer -->
   
 </div><!-- /#wrapper -->
-<div class="cd-popup" role="alert">
-  <div class="cd-popup-container">
-    <p>Share Item~!</p>
-    <table width="95%">
-      <tr>
-        <th colspan="2">
-          <div class="group">      
-            <input type="text" class="title" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Title</label>
-          </div>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <div class="group">
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Name</label>
-          </div>
-        </td>
-        <td>
-          <div class="group">
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Phone Number</label>
-          </div>
-        </td>
-      </tr>
-    </table>
-    <textarea class="textbox"type="text"></textarea>
-    <ul class="cd-buttons">
-      <li><a href="#0">Done</a></li>
-      <li><a href="#0">Cancel</a></li>
-    </ul>
-    <a href="#0" class="cd-popup-close img-replace"></a>
-  </div> <!-- cd-popup-container -->
-</div> <!-- cd-popup -->
+
 <!-- js -->
 <script src="js/classie.js"></script>
 <script src="js/demo.js"></script>

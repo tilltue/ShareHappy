@@ -14,18 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/', express.static(__dirname + '/html'));
 
-app.get('/index.html', function (req, res)
-{
-    fs.readFile('./html/index.html',function(error,data){
-		if(error){
-			console.log(error);
-		}else{
-			res.writeHead(200,{'Content-Type':'text/html'});
-			res.end(data);
-		}
-	});
-});
-
 mongoose.connect('mongodb://localhost/restapidb'); 
 
 var port = process.env.PORT || 8080; 		// set our port
