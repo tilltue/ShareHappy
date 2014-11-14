@@ -77,14 +77,28 @@
             }
           });
           //close popup when clicking the esc keyboard button
+          /*
           $(document).keyup(function(event){
             if(event.which=='27'){
               $('.cd-popup').removeClass('is-visible');
             }
+          });*/
+          $('#Done').click(function(){
+            $('.cd-popup').removeClass('is-visible');
+            return false; 
+          });
+          $('#Cancel').click(function(){
+            $('.cd-popup').removeClass('is-visible');
+            return false; 
+          });
+
+          $('#uploadBtn').change(function(){
+            console.log($('#uploadBtn').val());
+            $('.uploadFile').val($('#uploadBtn').val());
+            //console.log($('#textbox').val());
+            $('.textbox').css("height","-=200em");
           });
       });
-      
-      
   </script>
 </head>
 
@@ -180,7 +194,7 @@
 </div><!-- /#wrapper -->
 <div class="cd-popup" role="alert">
   <div class="cd-popup-container">
-    <p>Share Item~!</p>
+    <p>ADD ITEM</p>
     <table width="95%">
       <tr>
         <th colspan="2">
@@ -211,10 +225,23 @@
         </td>
       </tr>
     </table>
-    <textarea class="textbox"type="text"></textarea>
+    <textarea id="testtext" class="textbox" type="text"></textarea>
+    <table width="95%" height="70px">
+      <tr>
+        <td width="85%">
+          <input class="uploadFile" placeholder="Choose File" disabled="disabled" />
+        </td>
+        <td width="15%">
+          <div class="fileUpload btn btn-primary" style="MARGIN:0px 0px 0px 30px">
+            <span>Upload</span>
+            <input id="uploadBtn" type="file" class="upload" />
+          </div>
+        </td>
+      </tr>
+    </table>
     <ul class="cd-buttons">
-      <li><a href="#0">Done</a></li>
-      <li><a href="#0">Cancel</a></li>
+      <li><a href="" id="Done">Done</a></li>
+      <li><a href="" id="Cancel">Cancel</a></li>
     </ul>
     <a href="#0" class="cd-popup-close img-replace"></a>
   </div> <!-- cd-popup-container -->

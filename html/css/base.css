@@ -594,6 +594,34 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
 }
 
+input.uploadFile{
+  font-size:18px;
+  margin-left: 2em;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:95%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 75px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
 /* HIGHLIGHTER ================================== */
 .highlight {
   position:absolute;
