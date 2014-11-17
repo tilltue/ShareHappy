@@ -38,14 +38,13 @@ router.route('/share/items')
 
 	// create a bear (accessed at POST http://localhost:8080/api/share/items)
 	.post(function(req, res) {
-		
+		console.log('post item');
 		var item = new Item(); 		// create a new instance of the Item model
 		item.name = req.body.name;  // set the bears name (comes from the request)
 		item.create_date = new Date;
 		item.desc = req.body.desc;
-		item.images.push(req.body.images);
+		//item.images.push(req.body.images);
 		item.price = req.body.price;
-
 		// save the item and check for errors
 		item.save(function(err) {
 			if (err)
